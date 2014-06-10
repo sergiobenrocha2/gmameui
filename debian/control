@@ -1,0 +1,22 @@
+Source: gmameui
+Section: contrib/games
+Priority: optional
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Uploaders: Loïc Martin <loic.martin3@gmail.com>
+Build-Depends: debhelper (>= 7), autotools-dev, zlib1g-dev, libexpat1-dev,
+ libgtk2.0-dev, libglade2-dev, libgnome2-dev, intltool, libarchive-dev,
+ libvte-dev
+Standards-Version: 3.8.4
+Homepage: http://gmameui.sourceforge.net/
+
+Package: gmameui
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: sdlmame | xmame-x | xmame-sdl
+Description: front-end for the arcade games emulator MAME
+ GMAMEUI is a front-end program that helps you run MAME, the Multiple Arcade
+ Machine Emulator, allowing you to run your arcade games quickly and easily.
+ .
+ GMAMEUI is a fork of the defunct GXMame project, with a number of enhancements
+ over GXMame, among which the support for SDLMame and for more recent versions
+ of MAME.

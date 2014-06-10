@@ -1,0 +1,71 @@
+gmameui (0.2.12-1) unstable; urgency=low
+
+  * New upstream version: (Closes: #547699);
+  * [debian/control]:
+    - Build-Depends: add libvte-dev;
+    - bump Standards-Version to 3.8.4;
+  * debian/patches/fix_gamelist_version_check: removed, already upstream;
+  * debian/rules: remove gmameui.desktop in clean: ;
+  * Switch to dpkg-source 3.0 (quilt) format.
+
+ -- Loïc Martin <loic.martin3@gmail.com>  Thu, 29 Apr 2010 18:20:36 +0200
+
+gmameui (0.2.11-2) unstable; urgency=low
+
+  * debian/copyright: document help/C/gmameui.xml license;
+  * debian/patches/fix_gamelist_version_check: use strtod instead of
+    g_ascii_strtod (patch from upstream CVS);
+  * debian/control: add quilt in Build-Depends;
+  * debian/rules: patch the source.
+
+ -- Loïc Martin <loic.martin3@gmail.com>  Fri, 04 Sep 2009 13:23:10 +0200
+
+gmameui (0.2.11-1) unstable; urgency=low
+
+  * New upstream version:
+    -XDG standard for config dirs (GMAMEUI config moved to ~/.config/gmameui,
+     MAME config moved to ~/.config/mame);
+    - .desktop.in now Freedesktop compliant.
+  * debian/copyright: correct license for intl/* files, add LGPL-2 license.
+  * debian/rules: don't install custom .desktop file anymore.
+
+ -- Loïc Martin <loic.martin3@gmail.com>  Sun, 30 Aug 2009 10:22:04 +0200
+
+gmameui (0.2.10-3) unstable; urgency=low
+
+  * debian/rules: use --as-needed to avoid unnecessary dependency on Gnome.
+  * debian/control: bump Standards-Version to 3.8.3, no changes needed.
+
+ -- Loïc Martin <loic.martin3@gmail.com>  Sun, 23 Aug 2009 11:28:44 +0200
+
+gmameui (0.2.10-2) unstable; urgency=low
+
+  * debian/copyright: small fixes, latest DEP5 revision;
+  * fix lines over 80 characters in debian/control, debian/rules;
+  * debian/rules: use cp instead of mv to install XPM icon.
+
+ -- Loïc Martin <loic.martin3@gmail.com>  Mon, 10 Aug 2009 11:48:25 +0200
+
+gmameui (0.2.10-1) unstable; urgency=low
+
+  * New upstream release, replaces src/unzip.* with files that are
+    GPL-compatible.
+  * [debian/control]:
+    - Build-Depends: add libarchive-dev (replaces the non-GPL-compliant code),
+      remove gnome-doc-utils and scrollkeeper (not needed at the moment);
+    - bump Standards-Version to 3.8.2;
+  * [debian/rules]: add --disable-doc to configure in config.status: target.
+
+ -- Loïc Martin <loic.martin3@gmail.com>  Tue, 14 Jul 2009 15:11:01 +0200
+
+gmameui (0.2.9-1) unstable; urgency=low
+
+  * New Upstream Version
+
+ -- Loïc Martin <loic.martin3@gmail.com>  Tue, 09 Jun 2009 20:13:05 +0200
+
+gmameui (0.2.8-1) unstable; urgency=low
+
+  * Initial release (Closes: #531450)
+
+ -- Loïc Martin <loic.martin3@gmail.com>  Mon, 01 Jun 2009 16:07:03 +0200

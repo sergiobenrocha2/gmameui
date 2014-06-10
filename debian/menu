@@ -1,0 +1,9 @@
+?package(gmameui): \
+        needs="X11" \
+        section="Applications/Emulators" \
+        title="GMAMEUI" \
+        icon="/usr/share/pixmaps/gmameui.xpm" \
+        command="/usr/games/gmameui" \
+        longtitle="GMAMEUI Arcade Machine Emulator Frontend"
+
+
