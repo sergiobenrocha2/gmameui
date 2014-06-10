@@ -1,3 +1,10 @@
+Overview of changes in GMAMEUI 0.2.13 (unofficial release)
+=====================================
+
+* Based in cvs code, with fedora patches. The debian package with this version is 
+  based in rpm package.
+
+
 Overview of changes in GMAMEUI 0.2.12
 =====================================
 

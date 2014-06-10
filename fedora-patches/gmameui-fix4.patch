@@ -1,0 +1,11 @@
+--- setup-gettext.orig	2012-07-02 06:24:01.754301270 +0100
++++ setup-gettext	2012-07-02 06:28:56.355849439 +0100
+@@ -181,7 +181,7 @@ if test $NUMVAR -gt 0; then
+ fi
+ 
+ # Okay, run the main stuff
+-if test "$GETTEXT_TOOL" = "autopoint"; then
++if [ 1 == 1 ]; then
+ 	backup_m4
+ 	[ $VERBOSE -eq 1 ] && echo "  autopoint --force"
+ 	echo n | autopoint --force || abort

@@ -96,7 +96,7 @@ read_pixbuf_from_zip_file (gchar *zipfilename, gchar *romname)
 			buffer_data = (gchar *) g_malloc0 (filesize);
 			
 			/* Read the zipped pixbuf into memory */
-			archive_read_data_into_buffer (zipfile, buffer_data, filesize);
+			archive_read_data (zipfile, buffer_data, filesize);
 			
 			pixbuf = load_pixbuf_data (buffer_data, filesize);
 									 
@@ -266,7 +266,7 @@ GList *get_zip_contents_OLD (gchar *zipfilename)
 		buffer_data = (guchar *) g_malloc0 (filesize);
 
 		/* Read the zipped ROM into memory */
-		i = archive_read_data_into_buffer (zipfile, buffer_data, filesize);
+		i = archive_read_data (zipfile, buffer_data, filesize);
 
 		if ((i == ARCHIVE_FATAL) || (i == ARCHIVE_WARN)) {
 			GMAMEUI_DEBUG ("Error/warning from zip file %s - %s", filename, archive_error_string (zipfile));

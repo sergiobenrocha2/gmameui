@@ -1,0 +1,14 @@
+diff -up gmameui-0.2.12/src/gmameui.c.fix gmameui-0.2.12/src/gmameui.c
+--- gmameui-0.2.12/src/gmameui.c.fix	2009-09-05 13:14:33.000000000 +0200
++++ gmameui-0.2.12/src/gmameui.c	2012-05-13 23:23:40.298904121 +0200
+@@ -31,9 +31,7 @@
+ #include <locale.h>
+ #include <unistd.h>
+ #include <signal.h>
+-#include <glib/gprintf.h>
+-#include <glib/gutils.h>
+-#include <glib/gstdio.h>	/* For g_mkdir */
++#include <glib.h>
+ #include <gtk/gtkmain.h>
+ #include <gtk/gtkfilesel.h>
+ 

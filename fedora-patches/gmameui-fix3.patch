@@ -1,0 +1,22 @@
+* Fix FTBFS with libarchive12
+* Build-depend on libarchive-dev (>= 3.0.0)
+--- src/gmameui-zip-utils.c.orig	2012-07-02 05:51:55.114101799 +0100
++++ src/gmameui-zip-utils.c	2012-07-02 05:53:00.638847033 +0100
+@@ -96,7 +96,7 @@ read_pixbuf_from_zip_file (gchar *zipfil
+ 			buffer_data = (gchar *) g_malloc0 (filesize);
+ 			
+ 			/* Read the zipped pixbuf into memory */
+-			archive_read_data_into_buffer (zipfile, buffer_data, filesize);
++			archive_read_data (zipfile, buffer_data, filesize);
+ 			
+ 			pixbuf = load_pixbuf_data (buffer_data, filesize);
+ 									 
+@@ -266,7 +266,7 @@ GList *get_zip_contents_OLD (gchar *zipf
+ 		buffer_data = (guchar *) g_malloc0 (filesize);
+ 
+ 		/* Read the zipped ROM into memory */
+-		i = archive_read_data_into_buffer (zipfile, buffer_data, filesize);
++		i = archive_read_data (zipfile, buffer_data, filesize);
+ 
+ 		if ((i == ARCHIVE_FATAL) || (i == ARCHIVE_WARN)) {
+ 			GMAMEUI_DEBUG ("Error/warning from zip file %s - %s", filename, archive_error_string (zipfile));
