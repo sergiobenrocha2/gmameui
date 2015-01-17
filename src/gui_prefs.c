@@ -763,7 +763,7 @@ static void mame_gui_prefs_save_int (MameGuiPrefs *pr, GParamSpec *param, gpoint
 
 	/* Set the value and save the file */
 	g_key_file_set_integer (pr->priv->prefs_ini_file, "Preferences", key, value);
-	g_key_file_save_to_file (pr->priv->prefs_ini_file, pr->priv->filename);
+	gmameui_file_save_to_file (pr->priv->prefs_ini_file, pr->priv->filename);
 	
 	g_free (key);
 	
@@ -805,7 +805,7 @@ static void mame_gui_prefs_save_int_arr (MameGuiPrefs *pr, GParamSpec *param, gp
 
 	/* Set the value and save the file */
 	g_key_file_set_integer_list (pr->priv->prefs_ini_file, "Preferences", key, value, NUMBER_COLUMN);
-	g_key_file_save_to_file (pr->priv->prefs_ini_file, pr->priv->filename);
+	gmameui_file_save_to_file (pr->priv->prefs_ini_file, pr->priv->filename);
 		
 	g_free (key);
 	
@@ -832,7 +832,7 @@ static void mame_gui_prefs_save_bool (MameGuiPrefs *pr, GParamSpec *param, gpoin
 
 	/* Set the value and save the file */
 	g_key_file_set_boolean (pr->priv->prefs_ini_file, "Preferences", key, value);
-	g_key_file_save_to_file (pr->priv->prefs_ini_file, pr->priv->filename);
+	gmameui_file_save_to_file (pr->priv->prefs_ini_file, pr->priv->filename);
 		
 	g_free (key);
 	
@@ -859,7 +859,7 @@ static void mame_gui_prefs_save_string (MameGuiPrefs *pr, GParamSpec *param, gpo
 
 	/* Set the value and save the file */
 	g_key_file_set_string (pr->priv->prefs_ini_file, "Preferences", key, value);
-	g_key_file_save_to_file (pr->priv->prefs_ini_file, pr->priv->filename);
+	gmameui_file_save_to_file (pr->priv->prefs_ini_file, pr->priv->filename);
 	
 	g_free (key);
 	
@@ -915,7 +915,7 @@ mame_gui_prefs_save_string_arr (MameGuiPrefs *pr, GParamSpec *param, gpointer us
 		/* Set the value and save the file */
 		g_key_file_set_string_list (pr->priv->prefs_ini_file, "Preferences", key, value, n_va);
 	}
-	g_key_file_save_to_file (pr->priv->prefs_ini_file, pr->priv->filename);
+	gmameui_file_save_to_file (pr->priv->prefs_ini_file, pr->priv->filename);
 		
 	GMAMEUI_DEBUG ("Saving string array %s... done", key);
 	
