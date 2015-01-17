@@ -31,9 +31,7 @@
 #include <locale.h>
 #include <unistd.h>
 #include <signal.h>
-#include <glib/gprintf.h>
-#include <glib/gutils.h>
-#include <glib/gstdio.h>	/* For g_mkdir */
+#include <glib.h>
 #include <gtk/gtkmain.h>
 #include <gtk/gtkfilesel.h>
 
