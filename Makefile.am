@@ -41,7 +41,7 @@ icon_DATA = 	gmameui.png \
 		gmameui-screen.png
 
 docdir = $(datadir)/doc/$(PACKAGE)
-doc_DATA = BUGS NEWS COPYING AUTHORS README TODO ChangeLog
+doc_DATA = BUGS NEWS COPYING AUTHORS README.md TODO ChangeLog
 
 # not needed for rpm building
 #rpmdir = /usr/src/rpm/SPECS
