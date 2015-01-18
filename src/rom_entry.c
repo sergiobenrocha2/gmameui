@@ -635,7 +635,7 @@ mame_rom_entry_set_name (MameRomEntry *rom, gchar *value)
 	
 	g_return_if_fail (rom != NULL);
 
-	if (!g_strncasecmp (value, "The ",4))
+	if (!g_ascii_strncasecmp (value, "The ",4))
 	{
 		value += 4;
 		rom->priv->the_trailer = TRUE;

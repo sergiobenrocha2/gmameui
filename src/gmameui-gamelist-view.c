@@ -449,8 +449,8 @@ game_filtered (MameRomEntry * rom, gint rom_filter_opt)
 			
 			case DRIVER:
 				g_object_get (rom, "driver", &driver, NULL);
-				retval = ((is && !g_strcasecmp (driver,value)) ||
-					 (!is && g_strcasecmp (driver,value)));
+				retval = ((is && !g_ascii_strcasecmp (driver,value)) ||
+					 (!is && g_ascii_strcasecmp (driver,value)));
 				g_free (driver);
 				break;
 			case CLONE:
@@ -537,18 +537,18 @@ game_filtered (MameRomEntry * rom, gint rom_filter_opt)
 				manufacturer = rom_entry_get_manufacturers (rom);
 				* we have now one or two clean manufacturer (s) we still need to differentiates sub companies*
 				if (manufacturer[1] != NULL) {
-					if ( (is && !g_strncasecmp (manufacturer[0], value, 5)) ||
-					     (!is && g_strncasecmp (manufacturer[0], value, 5)) ||
-					     (is && !g_strncasecmp (manufacturer[1], value, 5)) ||
-					     (!is && g_strncasecmp (manufacturer[1], value, 5))
+					if ( (is && !g_ascii_strncasecmp (manufacturer[0], value, 5)) ||
+					     (!is && g_ascii_strncasecmp (manufacturer[0], value, 5)) ||
+					     (is && !g_ascii_strncasecmp (manufacturer[1], value, 5)) ||
+					     (!is && g_ascii_strncasecmp (manufacturer[1], value, 5))
 					     ) {
 						g_strfreev (manufacturer);
 						retval = TRUE;
 
 					}
 				} else {
-					if ( (is && !g_strncasecmp (manufacturer[0], value, 5)) ||
-					     (!is && g_strncasecmp (manufacturer[0], value, 5))
+					if ( (is && !g_ascii_strncasecmp (manufacturer[0], value, 5)) ||
+					     (!is && g_ascii_strncasecmp (manufacturer[0], value, 5))
 					     ) {
 						g_strfreev (manufacturer);
 						retval = TRUE;
