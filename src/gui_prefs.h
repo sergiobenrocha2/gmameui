@@ -159,8 +159,8 @@ static const directory_config directory_prefs [] = {
 	{ PROP_DIR_ICONS, "dir-icons", "icons" },
 	{ PROP_DIR_CTRLR, "dir-ctrlr", "ctrlr" },
 
-	{ PROP_FILE_CATVER, "file-catver", "catver.ini" },
-	{ PROP_FILE_CHEAT, "file-cheat", "cheat.dat" },
+	{ PROP_FILE_CATVER, "file-catver", "Catver.ini" },
+	{ PROP_FILE_CHEAT, "file-cheat", "cheat.7z" },
 	{ PROP_FILE_HISCORE, "file-hiscore", "hiscore.dat" },
 	{ PROP_FILE_HISTORY, "file-history", "history.dat" },
 	{ PROP_FILE_MAMEINFO, "file-mameinfo", "mameinfo.dat" },
