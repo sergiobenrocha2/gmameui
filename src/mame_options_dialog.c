@@ -709,8 +709,8 @@ mame_options_dialog_destroy (GtkObject *object)
 GMAMEUI_DEBUG ("Destroying mame options dialog...");	
 	dlg = MAME_OPTIONS_DIALOG (object);
 	
-	if (dlg->priv->builder)
-		g_object_unref (dlg->priv->builder);
+/* 	if (dlg->priv->builder) */
+/* 		g_object_unref (dlg->priv->builder); */
 	
 	if (dlg->priv->store) {
 		g_object_unref (dlg->priv->store);
