@@ -124,7 +124,7 @@ my_dtostr (char * buf, gdouble d)
 
 /* Custom function to save the keyfile to disk. If the file does not exist,
    it will be created */
-gboolean g_key_file_save_to_file(GKeyFile *kf, const gchar *file)
+gboolean gmameui_file_save_to_file(GKeyFile *kf, const gchar *file)
 {
 	GError *error = NULL;
 	gsize length, nr;

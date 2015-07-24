@@ -491,7 +491,7 @@ mame_options_legacy_save_string (MameOptionsLegacy *opts, GParamSpec *param, gpo
 	g_key_file_set_string (opts->priv->options_file, opt->category, opt->key, value);
 //	g_strfreev (stv);
 	
-	g_key_file_save_to_file (opts->priv->options_file, opts->priv->filename);
+	gmameui_file_save_to_file (opts->priv->options_file, opts->priv->filename);
 }
 
 static void
@@ -518,7 +518,7 @@ mame_options_legacy_save_double (MameOptionsLegacy *opts, GParamSpec *param, gpo
 	g_key_file_set_double (opts->priv->options_file, opt->category, opt->key, value);
 //	g_strfreev (stv);
 	
-	g_key_file_save_to_file (opts->priv->options_file, opts->priv->filename);
+	gmameui_file_save_to_file (opts->priv->options_file, opts->priv->filename);
 }
 
 static void
@@ -545,7 +545,7 @@ mame_options_legacy_save_int (MameOptionsLegacy *opts, GParamSpec *param, gpoint
 	g_key_file_set_integer (opts->priv->options_file, opt->category, opt->key, value);
 //	g_strfreev (stv);
 	
-	g_key_file_save_to_file (opts->priv->options_file, opts->priv->filename);
+	gmameui_file_save_to_file (opts->priv->options_file, opts->priv->filename);
 }
 
 static void
@@ -572,7 +572,7 @@ mame_options_legacy_save_bool (MameOptionsLegacy *opts, GParamSpec *param, gpoin
 	g_key_file_set_boolean (opts->priv->options_file, opt->category, opt->key, value);
 //	g_strfreev (stv);
 	
-	g_key_file_save_to_file (opts->priv->options_file, opts->priv->filename);
+	gmameui_file_save_to_file (opts->priv->options_file, opts->priv->filename);
 }
 
 /* Gets the value from the keyfile for the specified key, which should be of the

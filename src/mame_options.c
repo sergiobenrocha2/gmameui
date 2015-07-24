@@ -492,7 +492,7 @@ mame_options_save_string (MameOptions *opts, GParamSpec *param, gpointer user_da
 	g_key_file_set_string (opts->priv->options_file, opt->category, opt->key, value);
 //	g_strfreev (stv);
 	
-	g_key_file_save_to_file (opts->priv->options_file, opts->priv->filename);
+	gmameui_file_save_to_file (opts->priv->options_file, opts->priv->filename);
 }
 
 static void
@@ -519,7 +519,7 @@ mame_options_save_double (MameOptions *opts, GParamSpec *param, gpointer user_da
 	g_key_file_set_double (opts->priv->options_file, opt->category, opt->key, value);
 //	g_strfreev (stv);
 	
-	g_key_file_save_to_file (opts->priv->options_file, opts->priv->filename);
+	gmameui_file_save_to_file (opts->priv->options_file, opts->priv->filename);
 }
 
 static void
@@ -546,7 +546,7 @@ mame_options_save_int (MameOptions *opts, GParamSpec *param, gpointer user_data)
 	g_key_file_set_integer (opts->priv->options_file, opt->category, opt->key, value);
 //	g_strfreev (stv);
 	
-	g_key_file_save_to_file (opts->priv->options_file, opts->priv->filename);
+	gmameui_file_save_to_file (opts->priv->options_file, opts->priv->filename);
 }
 
 static void
@@ -573,7 +573,7 @@ mame_options_save_bool (MameOptions *opts, GParamSpec *param, gpointer user_data
 	g_key_file_set_boolean (opts->priv->options_file, opt->category, opt->key, value);
 //	g_strfreev (stv);
 	
-	g_key_file_save_to_file (opts->priv->options_file, opts->priv->filename);
+	gmameui_file_save_to_file (opts->priv->options_file, opts->priv->filename);
 }
 
 /* Gets the value from the keyfile for the specified key, which should be of the

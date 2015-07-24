@@ -31,9 +31,7 @@
 #include <locale.h>
 #include <unistd.h>
 #include <signal.h>
-#include <glib/gprintf.h>
-#include <glib/gutils.h>
-#include <glib/gstdio.h>	/* For g_mkdir */
+#include <glib.h>
 #include <gtk/gtkmain.h>
 #include <gtk/gtkfilesel.h>
 
@@ -191,6 +189,7 @@ gmameui_init (void)
 	
 	if (mame_executable) {
 		GMAMEUI_DEBUG ("Adding executable that was specified previously as %s", mame_executable);
+        mame_exec_list_add (main_gui.exec_list, mame_exec_new_from_path (mame_executable));
 		mame_exec_list_set_current_executable (main_gui.exec_list,
 						       mame_exec_list_get_exec_by_path (main_gui.exec_list, mame_executable));
 		g_free (mame_executable);

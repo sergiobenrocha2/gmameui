@@ -35,14 +35,12 @@ parse_gettext_version() {
 find_gettext() {
 	GETTEXT_TOOL=
 
-# Use autopoint only if cvs is installed.
-	(cvs --version) < /dev/null > /dev/null 2>&1 && {
-		GETTEXT_TOOL=autopoint
+# Use autopoint by default.
+    GETTEXT_TOOL=autopoint
 
-		(autopoint --version) < /dev/null > /dev/null 2>&1 || {
-			GETTEXT_TOOL=
-		}
-	}
+    (autopoint --version) < /dev/null > /dev/null 2>&1 || {
+        GETTEXT_TOOL=
+    }
 
 	if test x$GETTEXT_TOOL = x; then
 		GETTEXT_TOOL=gettextize

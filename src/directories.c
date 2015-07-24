@@ -154,8 +154,8 @@ mame_directories_dialog_init (MameDirectoriesDialog *dialog)
 
 	GError* error = NULL;
 
-	const gchar *object_names[] = {
-		"notebook1",	/* Dialog */
+	gchar *object_names[] = {
+		"notebook1", NULL	/* Dialog */
 	};
 
 	priv = G_TYPE_INSTANCE_GET_PRIVATE (dialog,

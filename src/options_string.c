@@ -188,7 +188,7 @@ gchar *create_rompath_options_string(MameExec *exec)
 			if (!rompath)
 				rompath = g_strdup (g_value_get_string (g_value_array_get_nth (va_rom_paths, i)));
 			else
-				rompath = g_strjoin ((g_strcasecmp (mame_exec_get_name (exec), "xmame") == 0) ? G_SEARCHPATH_SEPARATOR_S : ";",
+				rompath = g_strjoin ((g_ascii_strcasecmp (mame_exec_get_name (exec), "xmame") == 0) ? G_SEARCHPATH_SEPARATOR_S : ";",
 							rompath,
 							g_value_get_string (g_value_array_get_nth (va_rom_paths, i)),
 							NULL);
@@ -202,7 +202,7 @@ gchar *create_rompath_options_string(MameExec *exec)
 			if (!samplepath)
 				samplepath = g_strdup (g_value_get_string (g_value_array_get_nth (va_sample_paths, i)));
 			else
-				samplepath = g_strjoin ((g_strcasecmp (mame_exec_get_name (exec), "xmame") == 0) ? G_SEARCHPATH_SEPARATOR_S : ";",
+				samplepath = g_strjoin ((g_ascii_strcasecmp (mame_exec_get_name (exec), "xmame") == 0) ? G_SEARCHPATH_SEPARATOR_S : ";",
 							samplepath,
 							g_value_get_string (g_value_array_get_nth (va_sample_paths, i)),
 							NULL);
