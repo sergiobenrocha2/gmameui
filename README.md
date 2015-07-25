@@ -20,13 +20,14 @@ Installing
 
 To install from source, you will need the following packages:
 
-autotools-dev, zlib1g-dev, libexpat1-dev, libgtk2.0-dev, libglade2-dev, intltool, libarchive-dev, libvte-dev, libzip-dev, libgtkimageview-dev, gnome-doc-utils
+autotools-dev, zlib1g-dev, libexpat1-dev, libgtk2.0-dev, libglade2-dev, intltool, libarchive-dev, libvte-dev, libzip-dev, libgtkimageview-dev
 
 Then:
 ```sh
-git clone https://github.com/sergiobenrocha2/gmameui.git gmameui
+git clone https://github.com/sergiomb2/gmameui.git gmameui
 cd gmameui/
-sh autogen.sh
+autoreconf -fiv
+intltoolize --force
 ./configure
 make
 make install  # as root
