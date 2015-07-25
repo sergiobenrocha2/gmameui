@@ -16,10 +16,6 @@ EXTRA_DIST = autogen.sh \
 	gmameui-general.png \
 	gmameui.6 \
 	BUGS \
-	setup-gettext \
-	intltool-update.in \
-	intltool-merge.in \
-	intltool-extract.in \
 	gnome-doc-utils.make \
 	m4 \
 	gmameui.spec.in	\
