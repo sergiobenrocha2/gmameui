@@ -73,17 +73,6 @@ else
    AC_MSG_RESULT([yes])
 fi
 
-if test ${enable_doc} = yes; then
-GNOME_DOC_INIT
-else
-dnl Do not care if GDU is not found
-GNOME_DOC_INIT(,,[:]) 
-dnl ENABLE_SK_TRUE="#"
-dnl ENABLE_SK_FALSE=""
-fi
-
-AM_CONDITIONAL(DISABLE_DOC, test ${enable_doc} = no)
-
 AC_ARG_ENABLE([debug], 
   AC_HELP_STRING([--enable-debug],[compile with debugging support (default: no)])
   ,,enable_debug=no)
@@ -135,7 +124,6 @@ src/Makefile
 data/Makefile
 intl/Makefile
 po/Makefile.in
-help/Makefile
 gmameui.spec
 ])
 
