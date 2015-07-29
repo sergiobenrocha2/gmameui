@@ -27,7 +27,7 @@ Then:
 git clone https://github.com/sergiomb2/gmameui.git gmameui
 cd gmameui/
 autoreconf -fiv
-intltoolize --force
+intltoolize
 ./configure
 make
 make install  # as root

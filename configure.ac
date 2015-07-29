@@ -53,10 +53,6 @@ AC_SUBST(PACKAGE_PIXMAPS_DIR)
 GETTEXT_PACKAGE=$PACKAGE
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["${GETTEXT_PACKAGE}"], [gettext domain])
-
-AM_GNU_GETTEXT_VERSION([0.12.1])
-AM_GNU_GETTEXT
-
 AC_PROG_INTLTOOL
 
 dnl ##########################
@@ -122,7 +118,6 @@ fi
 AC_CONFIG_FILES([ Makefile
 src/Makefile
 data/Makefile
-intl/Makefile
 po/Makefile.in
 gmameui.spec
 ])
