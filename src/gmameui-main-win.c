@@ -1058,7 +1058,7 @@ on_help_activate (GtkAction *action, gpointer user_data)
 						     NULL,
 						     _("There was an error opening the Help file"));
 		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (helperr_dlg),
-							  error->message);
+							  "%s", error->message);
 		gtk_dialog_run (GTK_DIALOG (helperr_dlg));
 		gtk_widget_destroy (helperr_dlg);
 		g_error_free (error);

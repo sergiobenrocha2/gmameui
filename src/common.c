@@ -44,7 +44,7 @@ gmameui_message (GtkDialogFlags type,
 					 GTK_DIALOG_DESTROY_WITH_PARENT,
 					 type,
 					 GTK_BUTTONS_CLOSE,
-					 my_args);
+					 "%s", my_args);
 	g_free (my_args);
 	gtk_dialog_run (GTK_DIALOG (dialog));
 	gtk_widget_destroy (dialog);
@@ -72,7 +72,7 @@ gmameui_dialog_create (GtkDialogFlags type,
 					 GTK_DIALOG_DESTROY_WITH_PARENT,
 					 type,
 					 GTK_BUTTONS_CLOSE,
-					 my_args);
+					 "%s", my_args);
 	g_free (my_args);
 
 	return dialog;

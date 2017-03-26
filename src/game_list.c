@@ -713,7 +713,7 @@ gamelist_check (MameExec *exec)
 		                        _("Rebuild gamelist"), GTK_RESPONSE_YES,
 		                        NULL);
 		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
-		                                          message);
+		                                          "%s", message);
 		result = gtk_dialog_run (GTK_DIALOG (dialog));
 		gtk_widget_destroy (dialog);
 

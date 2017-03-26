@@ -408,9 +408,9 @@ launch_emulation (MameRomEntry    *rom,
 		for (node = g_list_first (extra_output); node; node = node->next) {
 			secmessage = g_strconcat (secmessage, node->data, "\n", NULL);
 		}
-		dialog = gmameui_dialog_create (ERROR, NULL, title);
+		dialog = gmameui_dialog_create (ERROR, NULL, "%s", title);
 		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
-							  secmessage);
+							  "%s", secmessage);
 
 		gtk_dialog_run (GTK_DIALOG (dialog));
 		gtk_widget_destroy (dialog);
